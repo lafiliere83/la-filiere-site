@@ -116,89 +116,74 @@ const RDV_URL = import.meta.env.PUBLIC_RDV_URL || "#";
     </Container>
   </section>
 
-  <!-- PARCOURS -->
+  <!-- PARCOURS + TARIFS -->
   <section id="parcours" class="mt-2">
     <Container className="py-12">
-      <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red text-center">Parcours</div>
-      <h2 class="mt-3 text-center font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Choisis ton niveau. Gagne du temps.</h2>
+      <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red text-center">Parcours & tarifs</div>
+      <h2 class="mt-3 text-center font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Choisis ton niveau. Prix clairs.</h2>
       <p class="mt-3 text-center text-white/65 max-w-2xl mx-auto text-sm leading-relaxed">
-        Trois portes d’entrée, une même philosophie : clarté, décisions, exécution.
+        Trois portes d’entrée, une même méthode : clarté, décisions, exécution.
+        <span class="text-white/80 font-semibold"> Offres de lancement limitées.</span>
       </p>
 
       <div class="mt-10 grid gap-5 md:grid-cols-3">
-        <Card tone="accent" eyebrow="Débutant" title="Fondations">
-          Comprendre l’écosystème, parler le langage, structurer ton projet et éviter les erreurs de base.
+        <Card tone="accent" eyebrow="Essentiel" title="690 €">
+          <div class="text-sm text-white/75 leading-relaxed">
+            Pour structurer et sortir un projet proprement.
+          </div>
+          <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
+            <li>Fondations & méthode (M0)</li>
+            <li>Cartographie & diagnostic (M1)</li>
+            <li>Droits & fondamentaux (M2)</li>
+            <li>Production disque (M3)</li>
+            <li>Distribution & stratégie de sortie (M4)</li>
+            <li>Marketing, audience & data (M6)</li>
+          </ul>
+          <div class="mt-4 text-xs text-white/55">ou 3× 250 €</div>
           <div class="mt-5">
-            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Voir sur Podia →</a>
+            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Accéder sur Podia →</a>
           </div>
         </Card>
-        <Card eyebrow="Avancé" title="Structuration">
-          Mettre au propre : droits, deals, distribution, admin. Tu passes de “je fais” à “je pilote”.
+
+        <Card eyebrow="Avancé" title="890 €">
+          <div class="text-sm text-white/75 leading-relaxed">
+            Pour professionnaliser une activité et piloter l’admin.
+          </div>
+          <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
+            <li>Tout le Parcours Essentiel</li>
+            <li>Live : construire & tourner (M5)</li>
+            <li>Admin, financier & travail (M7)</li>
+          </ul>
+          <div class="mt-4 text-xs text-white/55">ou 3× 320 €</div>
           <div class="mt-5">
-            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Voir sur Podia →</a>
+            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Accéder sur Podia →</a>
           </div>
         </Card>
-        <Card eyebrow="Pro" title="Exécution & scaling">
-          Optimiser : stratégie, négociation, international, process, équipe, et décisions orientées marge.
+
+        <Card eyebrow="Pro" title="990 €">
+          <div class="text-sm text-white/75 leading-relaxed">
+            Maîtrise complète + communauté élèves.
+          </div>
+          <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
+            <li>Tous les modules (M0 → M10)</li>
+            <li>Bonus Tendances 2025+</li>
+            <li>Discord privé élèves</li>
+            <li>1 live mensuel collectif</li>
+          </ul>
+          <div class="mt-4 text-xs text-white/55">ou 3× 360 €</div>
           <div class="mt-5">
-            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Voir sur Podia →</a>
+            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Accéder sur Podia →</a>
           </div>
         </Card>
+      </div>
+
+      <div class="mt-8 text-center text-xs text-white/45">
+        Tarifs de lancement — susceptibles d’évoluer.
       </div>
     </Container>
   </section>
 
-  <!-- CONSULTING -->
-  <section class="mt-2">
-    <Container className="py-12">
-      <div class="rounded-xl2 border border-punk-red/30 bg-gradient-to-b from-punk-red/10 to-white/0 p-7 sm:p-10">
-        <div class="grid gap-6 md:grid-cols-2 md:items-center">
-          <div>
-            <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red">Consulting</div>
-            <h2 class="mt-3 font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Tu veux aller droit au point bloquant ?</h2>
-            <p class="mt-3 text-white/70 text-sm leading-relaxed">
-              Audit, stratégie, deal, distribution, édition, live, organisation, roadmap. Tu arrives avec une question précise,
-              tu repars avec un plan clair.
-            </p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-3 md:justify-end">
-            <Button size="lg" variant="primary" href={RDV_URL}>Prendre un RDV</Button>
-            <Button size="lg" variant="ghost" href="/consulting">Voir le format</Button>
-          </div>
-        </div>
-      </div>
-    </Container>
-  </section>
-
-  <!-- RESSOURCES -->
-  <section class="mt-2">
-    <Container className="py-12">
-      <div class="flex items-end justify-between gap-6 flex-wrap">
-        <div>
-          <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red">Ressources</div>
-          <h2 class="mt-3 font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Des outils gratuits (et utiles).</h2>
-          <p class="mt-3 text-white/65 max-w-2xl text-sm leading-relaxed">
-            Checklists, glossaire, templates — pour appliquer sans attendre.
-          </p>
-        </div>
-        <a href="/ressources" class="font-ui text-xs tracking-[0.28em] uppercase text-white/60 hover:text-white">Aller aux ressources →</a>
-      </div>
-
-      <div class="mt-8 grid gap-5 md:grid-cols-3">
-        <Card title="Checklist sortie" eyebrow="Template">
-          Les 15 points à vérifier avant livraison distributeur (assets, metadata, ISRC, versions).
-        </Card>
-        <Card title="Feuille de splits" eyebrow="Template">
-          Une base simple et carrée pour éviter les conflits après sortie.
-        </Card>
-        <Card title="Glossaire terrain" eyebrow="Définitions">
-          Les mots que tout le monde utilise… sans toujours les comprendre.
-        </Card>
-      </div>
-    </Container>
-  </section>
-
-  <!-- FAQ -->
+<!-- FAQ -->
   <section id="faq" class="mt-2">
     <Container className="py-12">
       <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red text-center">FAQ</div>

@@ -15,7 +15,8 @@ const RDV_URL = import.meta.env.PUBLIC_RDV_URL || "#";
   <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red">Parcours</div>
   <h1 class="mt-3 font-ui text-3xl sm:text-4xl font-extrabold tracking-tight">Trois niveaux. Une méthode.</h1>
   <p class="mt-4 text-white/70 leading-relaxed">
-    Ici on détaille la logique des parcours. La vente et l’accès se font sur Podia.
+    Trois parcours, une progression logique. <span class="text-white/85 font-semibold">Offres de lancement limitées.</span>
+    Tous les tarifs sont affichés ici pour être clair, et l’accès se fait via Podia.
   </p>
   <div class="mt-6 flex gap-3 flex-wrap">
     <Button variant="primary" href={PODIA_URL}>Voir sur Podia</Button>
@@ -24,16 +25,103 @@ const RDV_URL = import.meta.env.PUBLIC_RDV_URL || "#";
 </div>
 
 <div class="mt-10 grid gap-5 md:grid-cols-3">
-  <Card tone="accent" eyebrow="Débutant" title="Fondations">
-    Cartographie de l’industrie, rôles, droits, premiers contrats, erreurs fréquentes, checklists.
+  <Card tone="accent" eyebrow="Essentiel" title="690 €">
+    <div class="text-sm text-white/75 leading-relaxed">
+      Pour structurer et sortir un projet proprement.
+    </div>
+    <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
+      <li>M0 → M4 + M6</li>
+      <li>Fondations, production, distribution, marketing</li>
+      <li>Templates & checklists</li>
+    </ul>
+    <div class="mt-4 text-xs text-white/55">ou 3× 250 €</div>
+    <div class="mt-5">
+      <Button href={PODIA_URL}>Accéder sur Podia</Button>
+    </div>
   </Card>
-  <Card eyebrow="Avancé" title="Structuration">
-    Distribution, metadata, édition & gestion, admin, cash, process et templates.
+
+  <Card eyebrow="Avancé" title="890 €">
+    <div class="text-sm text-white/75 leading-relaxed">
+      Pour professionnaliser une activité et piloter l’admin.
+    </div>
+    <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
+      <li>Tout Essentiel</li>
+      <li>+ Live (M5)</li>
+      <li>+ Admin/financier/travail (M7)</li>
+    </ul>
+    <div class="mt-4 text-xs text-white/55">ou 3× 320 €</div>
+    <div class="mt-5">
+      <Button href={PODIA_URL}>Accéder sur Podia</Button>
+    </div>
   </Card>
-  <Card eyebrow="Pro" title="Exécution & scaling">
-    Négociation, international, stratégie multi-plateformes, organisation d’équipe, optimisation.
+
+  <Card eyebrow="Pro" title="990 €">
+    <div class="text-sm text-white/75 leading-relaxed">
+      Maîtrise complète + communauté élèves.
+    </div>
+    <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
+      <li>Tous les modules (M0 → M10)</li>
+      <li>Bonus Tendances 2025+</li>
+      <li>Discord privé élèves + live mensuel</li>
+    </ul>
+    <div class="mt-4 text-xs text-white/55">ou 3× 360 €</div>
+    <div class="mt-5">
+      <Button href={PODIA_URL}>Accéder sur Podia</Button>
+    </div>
   </Card>
 </div>
+
+<ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
+      <li>M0 → M4 + M6</li>
+      <li>Fondations, production, distribution, marketing</li>
+      <li>Templates & checklists</li>
+    </ul>
+    <div class="mt-4 text-xs text-white/55">ou 3× 250 €</div>
+    <div class="mt-5">
+      <Button href={PODIA_URL}>Accéder sur Podia</Button>
+    </div>
+  </Card>
+
+  <Card eyebrow="Avancé" title="890 €">
+    <div class="text-sm text-white/75 leading-relaxed">
+      Pour professionnaliser une activité et piloter l’admin.
+    </div>
+    <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
+      <li>Tout Essentiel</li>
+      <li>+ Live (M5)</li>
+      <li>+ Admin/financier/travail (M7)</li>
+    </ul>
+    <div class="mt-4 text-xs text-white/55">ou 3× 320 €</div>
+    <div class="mt-5">
+      <Button href={PODIA_URL}>Accéder sur Podia</Button>
+    </div>
+  </Card>
+
+  <Card eyebrow="Pro" title="990 €">
+    <div class="text-sm text-white/75 leading-relaxed">
+      Maîtrise complète + communauté élèves.
+    </div>
+    <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
+      <li>Tous les modules (M0 → M10)</li>
+      <li>Bonus Tendances 2025+</li>
+      <li>Discord privé élèves + live mensuel</li>
+    </ul>
+    <div class="mt-4 text-xs text-white/55">ou 3× 360 €</div>
+    <div class="mt-5">
+      <Button href={PODIA_URL}>Accéder sur Podia</Button>
+    </div>
+  </Card>
+</div>
+
+
+<div class="mt-10 rounded-xl2 border border-white/10 bg-white/5 p-6">
+  <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Communauté élèves (optionnelle)</div>
+  <p class="mt-2 text-sm text-white/70 leading-relaxed">
+    Accès réservé aux élèves : Discord privé + 1 live mensuel collectif.
+    <span class="text-white/85 font-semibold">24 €/mois</span>.
+  </p>
+</div>
+
 
     </Container>
   </section>
