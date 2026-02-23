@@ -1,0 +1,224 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Container from "../components/Container.astro";
+import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
+
+const PODIA_URL = import.meta.env.PUBLIC_PODIA_URL || "#";
+const RDV_URL = import.meta.env.PUBLIC_RDV_URL || "#";
+---
+<BaseLayout
+  title="La Filière — Formation Industrie Musicale"
+  description="Comprendre l'industrie musicale. Structurer un projet viable. Devenir autonome."
+>
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute -top-32 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-punk-red/12 blur-3xl"></div>
+      <div class="absolute top-20 right-[-120px] h-[320px] w-[320px] rounded-full bg-white/6 blur-3xl"></div>
+    </div>
+
+    <Container className="py-14 sm:py-20">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 rounded-xl2 border border-punk-red/30 bg-punk-red/10 px-3 py-2">
+          <span class="font-ui text-[10px] tracking-[0.34em] uppercase text-punk-red">Formation Industrie Musicale</span>
+          <span class="text-white/40">•</span>
+          <span class="font-ui text-[10px] tracking-[0.34em] uppercase text-white/50">By Otake</span>
+        </div>
+
+        <h1 class="mt-6 font-display text-5xl sm:text-6xl tracking-[0.12em] leading-[0.92]">
+          Comprendre. Structurer. Exécuter<span class="text-punk-red">.</span>
+        </h1>
+
+        <p class="mt-5 text-white/75 text-base sm:text-lg leading-relaxed max-w-2xl">
+          La Filière te donne une lecture claire de l’écosystème (droits, édition, distribution, live, marketing, admin),
+          puis un plan d’action concret pour faire avancer ton projet — sans flou, sans folklore.
+        </p>
+
+        <div class="mt-7 flex flex-col sm:flex-row gap-3">
+          <Button size="lg" variant="primary" href={PODIA_URL}>Accéder aux parcours</Button>
+          <Button size="lg" variant="ghost" href={RDV_URL}>Prendre un RDV</Button>
+        </div>
+
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div class="rounded-xl2 border border-white/10 bg-white/5 p-4">
+            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Approche</div>
+            <div class="mt-2 text-sm text-white/80">Terrain + méthode</div>
+          </div>
+          <div class="rounded-xl2 border border-white/10 bg-white/5 p-4">
+            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Niveau</div>
+            <div class="mt-2 text-sm text-white/80">Débutant → Pro</div>
+          </div>
+          <div class="rounded-xl2 border border-white/10 bg-white/5 p-4">
+            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Format</div>
+            <div class="mt-2 text-sm text-white/80">Parcours + outils</div>
+          </div>
+          <div class="rounded-xl2 border border-white/10 bg-white/5 p-4">
+            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Objectif</div>
+            <div class="mt-2 text-sm text-white/80">Autonomie</div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- CREDIBILITÉ -->
+  <section class="mt-2">
+    <Container className="py-12">
+      <div class="grid gap-6 md:grid-cols-2">
+        <Card eyebrow="Positionnement" title="Une vision claire de l’industrie (et de ses zones grises).">
+          On parle droits, deals, rapports de force, chiffres, et exécution. Pas juste “des conseils”.
+          L’objectif : te donner une carte du territoire, puis un chemin praticable.
+        </Card>
+        <Card eyebrow="Méthode" title="Des frameworks simples, des checklists, et des décisions guidées.">
+          Chaque notion est reliée à une action : quoi faire, dans quel ordre, avec quels documents, et quels risques.
+          Tu gagnes du temps et tu évites les erreurs coûteuses.
+        </Card>
+      </div>
+    </Container>
+  </section>
+
+  <!-- MODULES -->
+  <section id="modules">
+    <Container className="py-12">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red">Ce que tu vas maîtriser</div>
+          <h2 class="mt-3 font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Les fondamentaux, puis le niveau pro.</h2>
+          <p class="mt-3 text-white/65 max-w-2xl text-sm leading-relaxed">
+            Une progression logique : comprendre les acteurs, sécuriser les droits, structurer les deals, livrer correctement,
+            développer l’audience, piloter l’admin et le cash.
+          </p>
+        </div>
+        <a href="/parcours" class="font-ui text-xs tracking-[0.28em] uppercase text-white/60 hover:text-white">Voir tous les parcours →</a>
+      </div>
+
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <Card title="Droits & splits" eyebrow="Sécuriser">
+          Auteurs, éditeurs, producteurs, voisins, samples, contrats, documents clés. Le minimum pour ne pas te faire rincer.
+        </Card>
+        <Card title="Distribution & metadata" eyebrow="Livrer">
+          DSP, codes, assets, gestion des versions, pitch, check livraison, erreurs fréquentes.
+        </Card>
+        <Card title="Édition & synchro" eyebrow="Monétiser">
+          Gestion, sous-édition, synchro, one-stop, brief, négociation, partage des revenus.
+        </Card>
+        <Card title="Live & tournée" eyebrow="Scène">
+          Booking, contrats, riders, production, budgets, défraiements, paie, calendrier.
+        </Card>
+        <Card title="Marketing & audience" eyebrow="Croissance">
+          Contenus, plateformes, storytelling, pub, calendrier, analytics, routines.
+        </Card>
+        <Card title="Admin & cash" eyebrow="Pilotage">
+          Devis/factures, trésorerie, TVA, coûts, marges, décisions (vraiment) rentables.
+        </Card>
+      </div>
+    </Container>
+  </section>
+
+  <!-- PARCOURS -->
+  <section id="parcours" class="mt-2">
+    <Container className="py-12">
+      <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red text-center">Parcours</div>
+      <h2 class="mt-3 text-center font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Choisis ton niveau. Gagne du temps.</h2>
+      <p class="mt-3 text-center text-white/65 max-w-2xl mx-auto text-sm leading-relaxed">
+        Trois portes d’entrée, une même philosophie : clarté, décisions, exécution.
+      </p>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <Card tone="accent" eyebrow="Débutant" title="Fondations">
+          Comprendre l’écosystème, parler le langage, structurer ton projet et éviter les erreurs de base.
+          <div class="mt-5">
+            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Voir sur Podia →</a>
+          </div>
+        </Card>
+        <Card eyebrow="Avancé" title="Structuration">
+          Mettre au propre : droits, deals, distribution, admin. Tu passes de “je fais” à “je pilote”.
+          <div class="mt-5">
+            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Voir sur Podia →</a>
+          </div>
+        </Card>
+        <Card eyebrow="Pro" title="Exécution & scaling">
+          Optimiser : stratégie, négociation, international, process, équipe, et décisions orientées marge.
+          <div class="mt-5">
+            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Voir sur Podia →</a>
+          </div>
+        </Card>
+      </div>
+    </Container>
+  </section>
+
+  <!-- CONSULTING -->
+  <section class="mt-2">
+    <Container className="py-12">
+      <div class="rounded-xl2 border border-punk-red/30 bg-gradient-to-b from-punk-red/10 to-white/0 p-7 sm:p-10">
+        <div class="grid gap-6 md:grid-cols-2 md:items-center">
+          <div>
+            <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red">Consulting</div>
+            <h2 class="mt-3 font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Tu veux aller droit au point bloquant ?</h2>
+            <p class="mt-3 text-white/70 text-sm leading-relaxed">
+              Audit, stratégie, deal, distribution, édition, live, organisation, roadmap. Tu arrives avec une question précise,
+              tu repars avec un plan clair.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 md:justify-end">
+            <Button size="lg" variant="primary" href={RDV_URL}>Prendre un RDV</Button>
+            <Button size="lg" variant="ghost" href="/consulting">Voir le format</Button>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- RESSOURCES -->
+  <section class="mt-2">
+    <Container className="py-12">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red">Ressources</div>
+          <h2 class="mt-3 font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Des outils gratuits (et utiles).</h2>
+          <p class="mt-3 text-white/65 max-w-2xl text-sm leading-relaxed">
+            Checklists, glossaire, templates — pour appliquer sans attendre.
+          </p>
+        </div>
+        <a href="/ressources" class="font-ui text-xs tracking-[0.28em] uppercase text-white/60 hover:text-white">Aller aux ressources →</a>
+      </div>
+
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+        <Card title="Checklist sortie" eyebrow="Template">
+          Les 15 points à vérifier avant livraison distributeur (assets, metadata, ISRC, versions).
+        </Card>
+        <Card title="Feuille de splits" eyebrow="Template">
+          Une base simple et carrée pour éviter les conflits après sortie.
+        </Card>
+        <Card title="Glossaire terrain" eyebrow="Définitions">
+          Les mots que tout le monde utilise… sans toujours les comprendre.
+        </Card>
+      </div>
+    </Container>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mt-2">
+    <Container className="py-12">
+      <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red text-center">FAQ</div>
+      <h2 class="mt-3 text-center font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Les questions qui reviennent.</h2>
+
+      <div class="mt-10 grid gap-4 max-w-3xl mx-auto">
+        {[
+          ["C’est pour quel niveau ?", "Du débutant motivé au pro qui veut structurer et gagner du temps. Tu choisis ton parcours."],
+          ["C’est orienté France uniquement ?", "La base est très France (droits, écosystème), mais les logiques de deals et d’exécution sont internationales."],
+          ["Combien de temps ça prend ?", "Tu avances à ton rythme. Le but est surtout d’appliquer rapidement sur ton cas."],
+          ["J’ai déjà un label / des sorties, ça vaut le coup ?", "Oui si tu veux clarifier les process, les deals, et éviter les angles morts (droits, livraison, admin, cash)."],
+          ["Vous parlez d’édition / synchro ?", "Oui : gestion, sous-édition, synchro, one-stop, négociation et partage des revenus."],
+          ["Je peux prendre un RDV avant d’acheter ?", "Oui : un RDV peut servir à définir le bon parcours et les priorités."],
+        ].map(([q, a]) => (
+          <details class="rounded-xl2 border border-white/10 bg-ink-900 p-5">
+            <summary class="cursor-pointer font-ui text-sm font-bold">{q}</summary>
+            <p class="mt-3 text-sm text-white/70 leading-relaxed">{a}</p>
+          </details>
+        ))}
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

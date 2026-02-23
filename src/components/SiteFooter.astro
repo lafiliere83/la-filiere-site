@@ -1,0 +1,54 @@
+---
+import Container from "./Container.astro";
+import Logo from "./Logo.astro";
+
+const year = new Date().getFullYear();
+const IG = import.meta.env.PUBLIC_INSTAGRAM || "#";
+const TT = import.meta.env.PUBLIC_TIKTOK || "#";
+const YT = import.meta.env.PUBLIC_YOUTUBE || "#";
+const TW = import.meta.env.PUBLIC_TWITCH || "#";
+---
+<footer class="mt-20 border-t border-white/10">
+  <Container className="py-10">
+    <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+      <div class="max-w-md">
+        <div class="flex items-center gap-3">
+          <Logo />
+          <span class="font-ui text-[10px] tracking-[0.34em] uppercase text-white/50">By Otake</span>
+        </div>
+        <p class="mt-4 text-sm text-white/60 leading-relaxed">
+          La Filière — Formation industrie musicale. Une approche terrain, structurée, orientée business & exécution.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 text-sm">
+        <div>
+          <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/40">Site</div>
+          <div class="mt-3 grid gap-2 text-white/70">
+            <a class="hover:text-white" href="/parcours">Parcours</a>
+            <a class="hover:text-white" href="/consulting">Consulting</a>
+            <a class="hover:text-white" href="/ressources">Ressources</a>
+            <a class="hover:text-white" href="/contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/40">Réseaux</div>
+          <div class="mt-3 grid gap-2 text-white/70">
+            <a class="hover:text-white" href={TT} target="_blank" rel="noreferrer">TikTok</a>
+            <a class="hover:text-white" href={IG} target="_blank" rel="noreferrer">Instagram</a>
+            <a class="hover:text-white" href={YT} target="_blank" rel="noreferrer">YouTube</a>
+            <a class="hover:text-white" href={TW} target="_blank" rel="noreferrer">Twitch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
+      <div>© {year} La Filière — By Otake</div>
+      <div class="flex gap-4">
+        <a class="hover:text-white" href="/mentions-legales">Mentions légales</a>
+        <a class="hover:text-white" href="/politique-confidentialite">Confidentialité</a>
+      </div>
+    </div>
+  </Container>
+</footer>

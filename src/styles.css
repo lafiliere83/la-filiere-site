@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base */
+:root {
+  color-scheme: dark;
+}
+
+::selection {
+  background: rgba(255, 51, 102, 0.35);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0A0A0A;
+  color: white;
+}
+
+/* Subtle grain */
+.bg-grain {
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: 0 0;
+  opacity: 0.10;
+  pointer-events: none;
+}
+
+/* Smooth anchor offset for sticky header */
+:target {
+  scroll-margin-top: 96px;
+}

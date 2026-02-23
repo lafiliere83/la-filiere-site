@@ -1,0 +1,12 @@
+---
+const { variant = "full", light = false } = Astro.props;
+const textColor = light ? "text-black" : "text-white";
+---
+<span class={`inline-flex items-end gap-1 ${textColor}`}>
+  {variant === "icon" ? (
+    <span class="font-display tracking-[0.18em] text-2xl">LF</span>
+  ) : (
+    <span class="font-display tracking-[0.22em] text-2xl sm:text-3xl">LA FILIÈRE</span>
+  )}
+  <span class="text-punk-red text-[10px] leading-none mb-[6px]">●</span>
+</span>
