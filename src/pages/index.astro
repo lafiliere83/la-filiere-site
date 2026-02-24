@@ -7,6 +7,7 @@ import Card from "../components/Card.astro";
 const PODIA_URL = import.meta.env.PUBLIC_PODIA_URL || "#";
 const RDV_URL = import.meta.env.PUBLIC_RDV_URL || "#";
 ---
+
 <BaseLayout
   title="La Filière — Formation Industrie Musicale"
   description="Comprendre l'industrie musicale. Structurer un projet viable. Devenir autonome."
@@ -14,103 +15,148 @@ const RDV_URL = import.meta.env.PUBLIC_RDV_URL || "#";
   <!-- HERO -->
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute -top-32 left-1/2 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-punk-red/12 blur-3xl"></div>
-      <div class="absolute top-20 right-[-120px] h-[320px] w-[320px] rounded-full bg-white/6 blur-3xl"></div>
+      <div class="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-punk-red/12 blur-3xl"></div>
+      <div class="absolute bottom-[-140px] right-[-140px] h-[380px] w-[380px] rounded-full bg-white/5 blur-3xl"></div>
     </div>
 
     <Container className="py-14 sm:py-20">
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 rounded-xl2 border border-punk-red/30 bg-punk-red/10 px-3 py-2">
-          <span class="font-ui text-[10px] tracking-[0.34em] uppercase text-punk-red">Formation Industrie Musicale</span>
-          <span class="text-white/40">•</span>
-          <span class="font-ui text-[10px] tracking-[0.34em] uppercase text-white/50">By Otake</span>
+      <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+        <!-- Left -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 rounded-xl2 border border-punk-red/30 bg-punk-red/10 px-3 py-2">
+            <span class="font-ui text-[10px] tracking-[0.34em] uppercase text-punk-red">Formation industrie musicale</span>
+            <span class="text-white/40">•</span>
+            <span class="font-ui text-[10px] tracking-[0.34em] uppercase text-white/50">La Filière</span>
+          </div>
+
+          <h1 class="mt-6 font-display text-5xl sm:text-6xl tracking-[0.12em] leading-[0.92]">
+            Comprendre. Structurer. Exécuter<span class="text-punk-red">.</span>
+          </h1>
+
+          <p class="mt-5 text-white/75 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Une lecture claire de l’écosystème (droits, production, distribution, live, marketing, admin),
+            puis une méthode concrète pour prendre de meilleures décisions et avancer vite — sans blabla.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <Button href="#parcours" variant="primary">Voir les parcours</Button>
+            <Button href={RDV_URL} variant="ghost">Prendre un RDV</Button>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3 text-xs text-white/55">
+            <div class="rounded-xl2 border border-white/10 bg-white/5 px-3 py-2">11 modules</div>
+            <div class="rounded-xl2 border border-white/10 bg-white/5 px-3 py-2">77 vidéos</div>
+            <div class="rounded-xl2 border border-white/10 bg-white/5 px-3 py-2">Cas pratiques + checklists</div>
+          </div>
         </div>
 
-        <h1 class="mt-6 font-display text-5xl sm:text-6xl tracking-[0.12em] leading-[0.92]">
-          Comprendre. Structurer. Exécuter<span class="text-punk-red">.</span>
-        </h1>
+        <!-- Right -->
+        <div class="lg:col-span-5">
+          <div class="rounded-xl2 border border-white/10 bg-white/5 p-6 shadow-glow">
+            <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-white/60">Ce que tu obtiens</div>
+            <ul class="mt-4 grid gap-3 text-sm text-white/75">
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-punk-red"></span>
+                Une cartographie complète de la filière + les rôles (qui fait quoi, qui gagne quoi).
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-punk-red"></span>
+                Un cadre simple pour éviter les erreurs irréversibles (droits, contrats, metadata, splits).
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-punk-red"></span>
+                Des outils actionnables : checklists, méthodes, templates, réflexes de négociation.
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-punk-red"></span>
+                Un plan “release & croissance” réaliste (distribution, algos, contenu, pub, CRM).
+              </li>
+            </ul>
 
-        <p class="mt-5 text-white/75 text-base sm:text-lg leading-relaxed max-w-2xl">
-          La Filière te donne une lecture claire de l’écosystème (droits, édition, distribution, live, marketing, admin),
-          puis un plan d’action concret pour faire avancer ton projet — sans flou, sans folklore.
-        </p>
+            <div class="mt-6 grid grid-cols-2 gap-3 text-xs text-white/55">
+              <div class="rounded-xl2 border border-white/10 bg-ink-900/40 px-3 py-3">
+                <div class="font-ui uppercase tracking-[0.26em] text-[10px] text-white/50">Niveau</div>
+                <div class="mt-1 text-white/80">Débutant → Pro</div>
+              </div>
+              <div class="rounded-xl2 border border-white/10 bg-ink-900/40 px-3 py-3">
+                <div class="font-ui uppercase tracking-[0.26em] text-[10px] text-white/50">Format</div>
+                <div class="mt-1 text-white/80">Vidéos + PDF</div>
+              </div>
+            </div>
 
-        <div class="mt-7 flex flex-col sm:flex-row gap-3">
-          <Button size="lg" variant="primary" href={PODIA_URL}>Accéder aux parcours</Button>
-          <Button size="lg" variant="ghost" href={RDV_URL}>Prendre un RDV</Button>
-        </div>
-
-        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <div class="rounded-xl2 border border-white/10 bg-white/5 p-4">
-            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Approche</div>
-            <div class="mt-2 text-sm text-white/80">Terrain + méthode</div>
-          </div>
-          <div class="rounded-xl2 border border-white/10 bg-white/5 p-4">
-            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Niveau</div>
-            <div class="mt-2 text-sm text-white/80">Débutant → Pro</div>
-          </div>
-          <div class="rounded-xl2 border border-white/10 bg-white/5 p-4">
-            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Format</div>
-            <div class="mt-2 text-sm text-white/80">Parcours + outils</div>
-          </div>
-          <div class="rounded-xl2 border border-white/10 bg-white/5 p-4">
-            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Objectif</div>
-            <div class="mt-2 text-sm text-white/80">Autonomie</div>
+            <div class="mt-6">
+              <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>
+                Accéder sur Podia →
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </Container>
   </section>
 
-  <!-- CREDIBILITÉ -->
+  <!-- POUR QUI -->
   <section class="mt-2">
     <Container className="py-12">
-      <div class="grid gap-6 md:grid-cols-2">
-        <Card eyebrow="Positionnement" title="Une vision claire de l’industrie (et de ses zones grises).">
-          On parle droits, deals, rapports de force, chiffres, et exécution. Pas juste “des conseils”.
-          L’objectif : te donner une carte du territoire, puis un chemin praticable.
-        </Card>
-        <Card eyebrow="Méthode" title="Des frameworks simples, des checklists, et des décisions guidées.">
-          Chaque notion est reliée à une action : quoi faire, dans quel ordre, avec quels documents, et quels risques.
-          Tu gagnes du temps et tu évites les erreurs coûteuses.
-        </Card>
+      <div class="grid gap-6 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red">Clarté</div>
+          <h2 class="mt-3 font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Une formation terrain, pas une théorie.</h2>
+          <p class="mt-3 text-sm text-white/70 leading-relaxed max-w-prose">
+            La Filière est pensée pour te donner une vision “système” + des décisions concrètes : quoi faire, dans quel ordre, et pourquoi.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-xl2 border border-white/10 bg-white/5 p-5">
+            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/55">Pour qui</div>
+            <ul class="mt-3 grid gap-2 text-sm text-white/75 list-disc pl-5">
+              <li>Artistes & porteurs de projet</li>
+              <li>Managers / labels indés</li>
+              <li>Beatmakers / producteurs</li>
+              <li>Entrepreneurs musique</li>
+            </ul>
+          </div>
+          <div class="rounded-xl2 border border-white/10 bg-white/5 p-5">
+            <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/55">Pour qui pas</div>
+            <ul class="mt-3 grid gap-2 text-sm text-white/75 list-disc pl-5">
+              <li>Ceux qui cherchent des “hacks” miracles</li>
+              <li>Ceux qui ne veulent pas se structurer</li>
+              <li>Ceux qui ne veulent pas lire/mettre en place</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </Container>
   </section>
 
-  <!-- MODULES -->
-  <section id="modules">
+  <!-- CE QUE TU VAS MAÎTRISER -->
+  <section class="mt-2">
     <Container className="py-12">
-      <div class="flex items-end justify-between gap-6 flex-wrap">
-        <div>
-          <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red">Ce que tu vas maîtriser</div>
-          <h2 class="mt-3 font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Les fondamentaux, puis le niveau pro.</h2>
-          <p class="mt-3 text-white/65 max-w-2xl text-sm leading-relaxed">
-            Une progression logique : comprendre les acteurs, sécuriser les droits, structurer les deals, livrer correctement,
-            développer l’audience, piloter l’admin et le cash.
-          </p>
-        </div>
-        <a href="/parcours" class="font-ui text-xs tracking-[0.28em] uppercase text-white/60 hover:text-white">Voir tous les parcours →</a>
-      </div>
+      <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red text-center">Programme</div>
+      <h2 class="mt-3 text-center font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Ce que tu vas maîtriser</h2>
+      <p class="mt-3 text-center text-sm text-white/65 max-w-2xl mx-auto leading-relaxed">
+        Une progression logique : comprendre le système → produire → sortir → développer → sécuriser.
+      </p>
 
-      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <Card title="Droits & splits" eyebrow="Sécuriser">
-          Auteurs, éditeurs, producteurs, voisins, samples, contrats, documents clés. Le minimum pour ne pas te faire rincer.
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <Card eyebrow="Droits" title="Œuvre vs master, splits, metadata">
+          Réflexes de base + traçabilité pour ne pas perdre d’argent (ou de droits) sans le savoir.
         </Card>
-        <Card title="Distribution & metadata" eyebrow="Livrer">
-          DSP, codes, assets, gestion des versions, pitch, check livraison, erreurs fréquentes.
+        <Card eyebrow="Production" title="Budget, rétroplanning, collabs">
+          Produire propre : studio, feat, samples, clips, contrats, organisation.
         </Card>
-        <Card title="Édition & synchro" eyebrow="Monétiser">
-          Gestion, sous-édition, synchro, one-stop, brief, négociation, partage des revenus.
+        <Card eyebrow="Sortie" title="Distribution, DSP, YouTube & CID">
+          Méthode de release : pitch DSP, algorithmes, Content ID, calendrier.
         </Card>
-        <Card title="Live & tournée" eyebrow="Scène">
-          Booking, contrats, riders, production, budgets, défraiements, paie, calendrier.
+        <Card eyebrow="Marketing" title="Contenu, pub, CRM">
+          Routine réaliste : contenu, pub, PR, communauté, plan promo 30 jours.
         </Card>
-        <Card title="Marketing & audience" eyebrow="Croissance">
-          Contenus, plateformes, storytelling, pub, calendrier, analytics, routines.
+        <Card eyebrow="Live" title="Tour-ready & économie du spectacle">
+          Licences, budgets, contrats, billetterie & taxes, checklists jour J.
         </Card>
-        <Card title="Admin & cash" eyebrow="Pilotage">
-          Devis/factures, trésorerie, TVA, coûts, marges, décisions (vraiment) rentables.
+        <Card eyebrow="Business" title="Admin, édition, contrats">
+          Structuration, paie/charges, édition & synchro, négociation et clauses.
         </Card>
       </div>
     </Container>
@@ -126,83 +172,122 @@ const RDV_URL = import.meta.env.PUBLIC_RDV_URL || "#";
         <span class="text-white/80 font-semibold"> Offres de lancement limitées.</span>
       </p>
 
-      <div class="mt-10 grid gap-5 md:grid-cols-3">
-        <Card tone="accent" eyebrow="Essentiel" title="690 €">
-          <div class="text-sm text-white/75 leading-relaxed">
-            Pour structurer et sortir un projet proprement.
+      <div class="mt-10 grid gap-5 lg:grid-cols-3">
+        <div class="rounded-xl2 border border-white/10 bg-white/5 p-6 flex flex-col">
+          <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/55">Essentiel</div>
+          <div class="mt-2 flex items-baseline gap-2">
+            <div class="font-ui text-3xl font-extrabold">690€</div>
+            <div class="text-xs text-white/50">ou 3× 250€</div>
           </div>
+          <p class="mt-3 text-sm text-white/75 leading-relaxed">Pour structurer et sortir un projet proprement.</p>
           <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
-            <li>Fondations & méthode (M0)</li>
-            <li>Cartographie & diagnostic (M1)</li>
-            <li>Droits & fondamentaux (M2)</li>
-            <li>Production disque (M3)</li>
-            <li>Distribution & stratégie de sortie (M4)</li>
-            <li>Marketing, audience & data (M6)</li>
+            <li>M0–M4 + M6</li>
+            <li>Droits, production, distribution</li>
+            <li>Marketing, audience & data</li>
           </ul>
-          <div class="mt-4 text-xs text-white/55">ou 3× 250 €</div>
-          <div class="mt-5">
-            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Accéder sur Podia →</a>
+          <div class="mt-6">
+            <Button href={PODIA_URL} variant="primary">Accéder sur Podia</Button>
           </div>
-        </Card>
+          <div class="mt-4 text-xs text-white/45">Tarif de lancement — susceptible d’évoluer.</div>
+        </div>
 
-        <Card eyebrow="Avancé" title="890 €">
-          <div class="text-sm text-white/75 leading-relaxed">
-            Pour professionnaliser une activité et piloter l’admin.
+        <div class="rounded-xl2 border border-punk-red/30 bg-punk-red/10 p-6 flex flex-col shadow-glow">
+          <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-punk-red">Avancé</div>
+          <div class="mt-2 flex items-baseline gap-2">
+            <div class="font-ui text-3xl font-extrabold">890€</div>
+            <div class="text-xs text-white/50">ou 3× 320€</div>
           </div>
+          <p class="mt-3 text-sm text-white/75 leading-relaxed">Pour professionnaliser une activité et piloter l’admin.</p>
           <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
-            <li>Tout le Parcours Essentiel</li>
-            <li>Live : construire & tourner (M5)</li>
-            <li>Admin, financier & travail (M7)</li>
+            <li>Tout Essentiel</li>
+            <li>+ Live (M5)</li>
+            <li>+ Admin & finances (M7)</li>
           </ul>
-          <div class="mt-4 text-xs text-white/55">ou 3× 320 €</div>
-          <div class="mt-5">
-            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Accéder sur Podia →</a>
+          <div class="mt-6">
+            <Button href={PODIA_URL} variant="primary">Accéder sur Podia</Button>
           </div>
-        </Card>
+          <div class="mt-4 text-xs text-white/45">Tarif de lancement — susceptible d’évoluer.</div>
+        </div>
 
-        <Card eyebrow="Pro" title="990 €">
-          <div class="text-sm text-white/75 leading-relaxed">
-            Maîtrise complète + communauté élèves.
+        <div class="rounded-xl2 border border-white/10 bg-white/5 p-6 flex flex-col">
+          <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/55">Pro (complet)</div>
+          <div class="mt-2 flex items-baseline gap-2">
+            <div class="font-ui text-3xl font-extrabold">990€</div>
+            <div class="text-xs text-white/50">ou 3× 360€</div>
           </div>
+          <p class="mt-3 text-sm text-white/75 leading-relaxed">Maîtrise complète + communauté élèves.</p>
           <ul class="mt-4 text-sm text-white/65 grid gap-2 list-disc pl-5">
-            <li>Tous les modules (M0 → M10)</li>
-            <li>Bonus Tendances 2025+</li>
+            <li>Tous les modules + bonus</li>
             <li>Discord privé élèves</li>
             <li>1 live mensuel collectif</li>
           </ul>
-          <div class="mt-4 text-xs text-white/55">ou 3× 360 €</div>
-          <div class="mt-5">
-            <a class="text-punk-red font-ui text-xs tracking-[0.28em] uppercase hover:opacity-90" href={PODIA_URL}>Accéder sur Podia →</a>
+          <div class="mt-6">
+            <Button href={PODIA_URL} variant="primary">Accéder sur Podia</Button>
           </div>
-        </Card>
+          <div class="mt-4 text-xs text-white/45">Tarif de lancement — susceptible d’évoluer.</div>
+        </div>
       </div>
 
-      <div class="mt-8 text-center text-xs text-white/45">
-        Tarifs de lancement — susceptibles d’évoluer.
+      <div class="mt-10 rounded-xl2 border border-white/10 bg-ink-900/40 p-6 text-center">
+        <div class="font-ui text-[11px] tracking-[0.28em] uppercase text-white/50">Communauté élèves</div>
+        <p class="mt-2 text-sm text-white/70 leading-relaxed">
+          Discord privé + 1 live mensuel collectif. Accès réservé aux élèves : <span class="text-white/85 font-semibold">24€/mois</span>.
+        </p>
       </div>
     </Container>
   </section>
 
-<!-- FAQ -->
-  <section id="faq" class="mt-2">
+  <!-- CONSULTING -->
+  <section class="mt-2">
+    <Container className="py-12">
+      <div class="rounded-xl2 border border-white/10 bg-white/5 p-8 lg:p-10">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-8">
+            <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red">Accompagnement</div>
+            <h2 class="mt-3 font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Besoin d’un avis sur ton cas précis ?</h2>
+            <p class="mt-3 text-sm text-white/70 leading-relaxed max-w-prose">
+              Une session pour clarifier ta stratégie (deal, structuration, release, admin) et repartir avec un plan d’action simple.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex lg:justify-end">
+            <Button href={RDV_URL} variant="primary">Prendre un RDV</Button>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mt-2">
     <Container className="py-12">
       <div class="font-ui text-[11px] tracking-[0.32em] uppercase text-punk-red text-center">FAQ</div>
-      <h2 class="mt-3 text-center font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Les questions qui reviennent.</h2>
+      <h2 class="mt-3 text-center font-ui text-2xl sm:text-3xl font-extrabold tracking-tight">Questions fréquentes</h2>
 
-      <div class="mt-10 grid gap-4 max-w-3xl mx-auto">
-        {[
-          ["C’est pour quel niveau ?", "Du débutant motivé au pro qui veut structurer et gagner du temps. Tu choisis ton parcours."],
-          ["C’est orienté France uniquement ?", "La base est très France (droits, écosystème), mais les logiques de deals et d’exécution sont internationales."],
-          ["Combien de temps ça prend ?", "Tu avances à ton rythme. Le but est surtout d’appliquer rapidement sur ton cas."],
-          ["J’ai déjà un label / des sorties, ça vaut le coup ?", "Oui si tu veux clarifier les process, les deals, et éviter les angles morts (droits, livraison, admin, cash)."],
-          ["Vous parlez d’édition / synchro ?", "Oui : gestion, sous-édition, synchro, one-stop, négociation et partage des revenus."],
-          ["Je peux prendre un RDV avant d’acheter ?", "Oui : un RDV peut servir à définir le bon parcours et les priorités."],
-        ].map(([q, a]) => (
-          <details class="rounded-xl2 border border-white/10 bg-ink-900 p-5">
-            <summary class="cursor-pointer font-ui text-sm font-bold">{q}</summary>
-            <p class="mt-3 text-sm text-white/70 leading-relaxed">{a}</p>
-          </details>
-        ))}
+      <div class="mt-10 grid gap-4 lg:grid-cols-2">
+        <div class="rounded-xl2 border border-white/10 bg-white/5 p-6">
+          <div class="font-ui text-sm font-bold">Je suis débutant, je peux suivre ?</div>
+          <p class="mt-2 text-sm text-white/70 leading-relaxed">
+            Oui. La progression est pensée du “mapping” jusqu’aux réflexes pro. Commence par Essentiel.
+          </p>
+        </div>
+        <div class="rounded-xl2 border border-white/10 bg-white/5 p-6">
+          <div class="font-ui text-sm font-bold">L’accès se fait où ?</div>
+          <p class="mt-2 text-sm text-white/70 leading-relaxed">
+            Le paiement et l’accès à la plateforme se font via Podia. Le site explique et oriente.
+          </p>
+        </div>
+        <div class="rounded-xl2 border border-white/10 bg-white/5 p-6">
+          <div class="font-ui text-sm font-bold">Je suis label/manager, c’est pertinent ?</div>
+          <p class="mt-2 text-sm text-white/70 leading-relaxed">
+            Oui — Avancé ou Pro selon ton niveau : contrats, admin, édition, live et négociation.
+          </p>
+        </div>
+        <div class="rounded-xl2 border border-white/10 bg-white/5 p-6">
+          <div class="font-ui text-sm font-bold">C’est du “copié-collé internet” ?</div>
+          <p class="mt-2 text-sm text-white/70 leading-relaxed">
+            Non : approche terrain + méthode + outils actionnables. Objectif : exécution et décisions.
+          </p>
+        </div>
       </div>
     </Container>
   </section>
